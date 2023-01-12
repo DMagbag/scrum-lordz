@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include(node-sql-island-hopping/views/island-hopping/head.ejs); %>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <%- include(node-sql-island-hopping/views/island-hopping/header.ejs); %>
+      </header>
+      <main>
+        <section id="about-island-hopping">
+          <%-
+          include(node-sql-island-hopping/views/island-hopping/about-island-hop.ejs);
+          %>
+        </section>
+        <section id="about-team">
+          <%-
+          include(node-sql-island-hopping/views/island-hopping/about-team.ejs);
+          %>
+        </section>
+      </main>
+      <footer class="footer">
+        <%- include(node-sql-island-hopping/views/island-hopping/footer.ejs); %>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<!-- <button id="name-button">Text in button</button> -->
