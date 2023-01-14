@@ -14,7 +14,7 @@ continentRouter.get("/", function (req, res, next){
                     res.render("campuses", {data: rows});
                 }
             }
-        )
+        );
     });
 });
 module.exports = continentRouter;
