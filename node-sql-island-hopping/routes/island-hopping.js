@@ -1,20 +1,23 @@
 let express = require("express")
-let campusRouter = express.Router();
-const dbConn = require();
+let island_hoppingRouter = express.Router();
+const dbConn = require("../lib/db");
 
 //display continents on the page
-continentRouter.get("/", function (req, res, next){
+island_hoppingRouter.get("/", function (req, res, next){
     return new Promise((resolve, reject) => {
         dbConn.query(
             "SELECT * FROM continent ORDER BY continent_id desc",
             function (err, rows) {
                 if (err) {
                     req.flash("error", err);
-                    // render to views/campuses/index.ejs
-                    res.render("campuses", {data: rows});
+                    // render to views/continents/index.ejs
+                    res.render("continents", {data: ""});
+                } else {
+                    //render to views/continents/index.ejs
+                    res.render("continents", {data: rows});
                 }
             }
         );
     });
 });
-module.exports = continentRouter;
+module.exports = island_hoppingRouter;

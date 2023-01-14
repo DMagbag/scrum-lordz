@@ -9,7 +9,7 @@ var session = require("express-session");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var continentsRouter = require('./routes/campuses');
+var island_hoppingRouter = require('./routes/island-hopping');
 
 var app = express();
 
@@ -37,6 +37,7 @@ app.use(flash());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use("/continents", island_hoppingRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
