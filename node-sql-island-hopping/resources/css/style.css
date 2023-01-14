@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato");
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+
+* {
+  font-family: "Poppins", "Lato", Arial, sans-serif;
+}
+
+body {
+  background-color: #1d5171;
+}
+
+html {
+  color: #f2f4f3;
+  font: 16px/1.5 sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  background-color: #dfce9d;
+}
+
+header {
+  background-color: #b5a36c;
+}
+
+#header_title {
+  color: #f2f4f3;
+  font-style: bold;
+  font-size: 50px;
+}
+
+#header__nav {
+  color: #f2f4f3;
+}
+
+a {
+  color: #f2f4f3;
+  text-decoration: none;
+}
+
+.header-nav--listitem {
+  list-style-type: none;
+}
+
+.header-nav--listitem:hover {
+  background-color: #65cbda;
+  border: 1mm solid #1d5171;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+#about-island-hopping {
+  background-color: #236e95;
+  border: 1px solid #1d5171;
+  border-radius: 5px;
+}
+
+#about-island-hopping--title {
+  color: #c2b280;
+}
+#about-island-hopping--info {
+  font-size: 12px;
+  font: #f2f4f3;
+}
+
+#about-team--title {
+  color: #1d5171;
+}
+
+.about-column {
+  background-color: #236e95;
+  border: 1px solid #1d5171;
+  border-radius: 5px;
+}
+
+.about-name {
+  color: #c2b280;
+}
+
+.about-image {
+  border: 1px solid #1d5171;
+  border-radius: 5px;
+}
+
+.about-bio {
+  color: #f2f4f3;
+  font-size: 12px;
+}
