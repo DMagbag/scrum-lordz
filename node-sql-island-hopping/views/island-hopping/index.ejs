@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include(node-sql-island-hopping/views/island-hopping/head.ejs); %>
-  </head>
-  <body>
-    <div class="container">
-      <header id="header-title">
-        <%- include(node-sql-island-hopping/views/island-hopping/header.ejs); %>
-      </header>
-      <main>
-        <section id="about-island-hopping">
-          <%-
-          include(node-sql-island-hopping/views/island-hopping/about-island-hop.ejs);
-          %>
-        </section>
-        <section id="about-team">
-          <%-
-          include(node-sql-island-hopping/views/island-hopping/about-team.ejs);
-          %>
-        </section>
-      </main>
-      <footer class="footer">
-        <%- include(node-sql-island-hopping/views/island-hopping/footer.ejs); %>
-      </footer>
-    </div>
-  </body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <link rel="stylesheet" href="/resources/css/style.css">
+        <link rel="stylesheet" href="/resources/css/layout.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <title>Continents</title>
+    </head>
+
+    <body>
+        <h1>JAC Enterprises Island Hopping</h1>
+
+        <% if (messages.success) { %>
+            <div class="alert alert-success" role="alert"><%- messages.success %></div>
+        <% } %>
+
+        <% if (messages.error) { %>
+            <div class="alert alert-danger" role="alert"><%- messages.error %></div>
+        <% } %>
+
+        <h2>
+            <% if (data.length) { %>
+            <table>
+                <tbody>
+                    <% for(let i = 0; i < data.length; i++) { %>
+                        <tr>
+                            <td>
+                                <a href="./island-hopping/continent/<%= data[i].continent_id%>"><%= data[i].location%></a>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+            <% } %>
+        </h2>
+
+
+    </body>
+
 </html>
 
-<!-- <button id="name-button">Text in button</button> -->
