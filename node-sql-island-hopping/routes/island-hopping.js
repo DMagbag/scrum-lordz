@@ -27,7 +27,7 @@ island_hoppingRouter.get("/continent/:continent_id", function(req, res, next){
 
     return new Promise((resolve, reject) => {
         dbConn.query(
-            "SELECT continent.continent_id, continent.location, country.country_id, country.location " +
+            "SELECT continent.continent_id, continent.location, country.country_id, country.description, country.location " +
             "FROM continent, country " +
             "WHERE continent.continent_id = country.continent_id " +
             "AND continent.continent_id = " +
@@ -48,15 +48,18 @@ island_hoppingRouter.get("/continent/:continent_id", function(req, res, next){
 });
 
 island_hoppingRouter.get("/continent/country/:country_id", function (req, res, next){
-    let countryId = req.params.countryId
+    let countryId = req.params.country_id;
 
     return new Promise((resolve, reject) =>{
         dbConn.query(
-            "SELECT country.country_id, country.location, island_chain.island_id, island_chain.location " + 
-            "FROM country, island_chain " +
-            'WHERE country.continent_id = island_chain.country_id ' + 
-            "AND country.country_id = " +
+            "SELECT country_island.country_id, country_island.island_id, island_chain.location, " + 
+            "island_chain.adventures, country.continent_id " +
+            "FROM country_island " +
+            "INNER JOIN island_chain ON country_island.island_id = island_chain.island_id " + 
+            "INNER JOIN country ON country_island.country_id = country.country_id " +
+            "WHERE country_island.country_id = " +
             countryId,
+            
 
             function (err, rows) {
                 if (err) {

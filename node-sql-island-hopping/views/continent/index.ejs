@@ -23,10 +23,7 @@
             <% } %>
 
             <% if(data.length) { %>
-                <h2>
-                    <!-- <%= data[0].location %> -->
-                </h2>
-            <% } %>
+                
         </header>
 
         <section class="country-list">
@@ -35,9 +32,11 @@
                 <ul class="country-list-links__country">
                     <% for(let i = 0; i < data.length; i++) { %>
                         <li class="country-list-links__country">
-                            <a class="country-list-links__link" href="./country/<%= data[i].country_id%>"><%= data[i].location%></a>
+                           <h3><a class="country-list-links__link" href="./country/<%= data[i].country_id%>"><%= data[i].location%></a></h3>
                         </li>
+                        <p class="country-description"><%= data[i].description%></p>
                     <% } %>
+            <% } %>
                 </ul>
             </nav>
 
