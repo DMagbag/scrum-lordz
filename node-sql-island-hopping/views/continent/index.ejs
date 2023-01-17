@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+    <title>Island Hopping Countries</title>
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <link rel="stylesheet" href="/resources/css/style.css">
-        <link rel="stylesheet" href="/resources/css/layout.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <title>Island Hopping</title>
-    </head>
+  <body>
+    <%- include('../partials/header'); %>
 
-    <body>
-        <header class="header">
-            <h1 class="header__title">Welcome to JAC Enterprises Island Hopping</h1>
+    <header class="header">
+      <h1 class="header__title">Welcome to JAC Enterprises Island Hopping</h1>
 
-            <% if (messages.success) { %>
-            <div class="alert alert-success" role="alert"><%- messages.success %></div>
-            <% } %>
+      <% if (messages.success) { %>
+      <div class="alert alert-success" role="alert">
+        <%- messages.success %>
+      </div>
+      <% } %> <% if (messages.error) { %>
+      <div class="alert alert-danger" role="alert"><%- messages.error %></div>
+      <% } %> <% if(data.length) { %>
+    </header>
 
-            <% if (messages.error) { %>
-            <div class="alert alert-danger" role="alert"><%- messages.error %></div>
-            <% } %>
+    <section class="country-list">
+      <h2 class="country-list__heading">Here is a list of our countries:</h2>
+      <nav class="country-list-nav">
+        <ul class="country-list-links__country">
+          <% for(let i = 0; i < data.length; i++) { %>
+          <li class="country-list-links__country">
+            <h3>
+              <a
+                class="country-list-links__link"
+                href="./country/<%= data[i].country_id%>"
+                ><%= data[i].location%></a
+              >
+            </h3>
+          </li>
+          <p class="country-description"><%= data[i].description%></p>
+          <% } %> <% } %>
+        </ul>
+      </nav>
 
-            <% if(data.length) { %>
-                
-        </header>
-
-        <section class="country-list">
-            <h2 class="country-list__heading">Here is a list of our countries:</h2>
-            <nav class="country-list-nav">
-                <ul class="country-list-links__country">
-                    <% for(let i = 0; i < data.length; i++) { %>
-                        <li class="country-list-links__country">
-                           <h3><a class="country-list-links__link" href="./country/<%= data[i].country_id%>"><%= data[i].location%></a></h3>
-                        </li>
-                        <p class="country-description"><%= data[i].description%></p>
-                    <% } %>
-            <% } %>
-                </ul>
-            </nav>
-
-            <a class="nav__home" href="/island-hopping" >Back to Island Hopping</a>
-        </section>
-
-    </body>
+      <a class="nav__home" href="/island-hopping">Back to Island Hopping</a>
+    </section>
+    <%- include('../partials/footer'); %>
+  </body>
 </html>
