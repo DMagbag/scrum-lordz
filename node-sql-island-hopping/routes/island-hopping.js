@@ -75,4 +75,12 @@ island_hoppingRouter.get("/continent/country/:country_id", function (req, res, n
     });
 });
 
+island_hoppingRouter.get("/about-team", function(req, res, next){
+    res.render("about-team", {title: "About Scrum Lordz"});
+});
+
+island_hoppingRouter.get("/about-island-hop", function(req, res, next){
+    res.render("about-island-hop", {title: "About JAC Enterprises"});
+});
+
 module.exports = island_hoppingRouter;
