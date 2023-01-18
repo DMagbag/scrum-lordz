@@ -194,6 +194,6 @@ select continent.location, country.country_id, country.location
 from continent, country
 where continent.continent_id = country.continent_id and continent.location = 'Asia';
 
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'wccibootcamp';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '92397237';
 
 flush privileges;

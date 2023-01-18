@@ -48,7 +48,7 @@ island_hoppingRouter.get("/continent/:continent_id", function(req, res, next){
 });
 
 island_hoppingRouter.get("/continent/country/:country_id", function (req, res, next){
-    let countryId = req.params.countryId
+    let countryId = req.params.country_id
 
     return new Promise((resolve, reject) =>{
         dbConn.query(
