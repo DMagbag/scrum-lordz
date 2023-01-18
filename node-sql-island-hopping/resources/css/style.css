@@ -15,7 +15,7 @@ body {
 }
 
 html {
-  color: #f2f4f3;
+  color: rgb(3, 3, 10);
   font: 16px/1.5 sans-serif;
   font-family: "Poppins", sans-serif;
 }
@@ -32,37 +32,45 @@ header {
   background-size: cover;
   background-color: tan;
   border-radius: 10px;
-  border-color: brown;
+  border: 2mm ridge brown;
+  color: rgb(3, 3, 10);
 }
 
 h2 {
   color: rgb(3, 3, 10);
 }
 
-#header_title {
-  font-style: bold;
-  font-size: 50px;
-}
-
-/* #header__nav {
-  color: #f2f4f3;
-} */
-
-a {
-  /* color: #f2f4f3; */
+#header__nav {
+  color: rgb(3, 3, 10);
   text-decoration: none;
 }
 
-.header-nav--listitem {
-  list-style-type: none;
-  color: rgb(3, 3, 10);
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.header-nav--listitem:hover {
-  background-color: #65cbda;
-  border: 1mm solid #1d5171;
-  border-radius: 3px;
+a {
+  color: rgb(3, 3, 10);
+  text-decoration: none;
+}
+.header-nav--list {
+  margin-bottom: 0px;
+}
+
+.header-nav--listItem {
+  list-style-type: none;
+  color: rgb(3, 3, 10);
+  text-decoration: none;
+  line-height: 20px;
+  font-size: 20px;
+}
+
+.header-nav--listItem:hover {
+  text-decoration: none;
+  /* color: rgb(3, 3, 10); */
   transition: 0.5s;
+  font-size: 25px;
 }
 
 #island-hopping__title {
@@ -111,5 +119,5 @@ a {
 }
 
 #footer-copyright {
-  color: white;
+  color: rgb(3, 3, 10);
 }
