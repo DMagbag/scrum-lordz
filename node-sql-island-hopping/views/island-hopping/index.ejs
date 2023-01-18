@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>JAC Enterprises Island Hopping</title>
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <link rel="stylesheet" href="/resources/css/style.css">
-        <link rel="stylesheet" href="/resources/css/layout.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <title>Continents</title>
-    </head>
+  <body>
+    <%- include('../partials/header'); %>
 
-    <body>
-        <h1>JAC Enterprises Island Hopping</h1>
+    <h1 id="island-hopping__title">
+      Welcome to JAC Enterprises Island Hopping
+    </h1>
+    <% if (messages.success) { %>
+    <div class="alert alert-success" role="alert"><%- messages.success %></div>
+    <% } %> <% if (messages.error) { %>
+    <div class="alert alert-danger" role="alert"><%- messages.error %></div>
+    <% } %>
 
-        <% if (messages.success) { %>
-            <div class="alert alert-success" role="alert"><%- messages.success %></div>
-        <% } %>
-
-        <% if (messages.error) { %>
-            <div class="alert alert-danger" role="alert"><%- messages.error %></div>
-        <% } %>
-
-        <h2>
-            <% if (data.length) { %>
-            <table>
-                <tbody>
-                    <% for(let i = 0; i < data.length; i++) { %>
-                        <tr>
-                            <td>
-                                <a href="./island-hopping/continent/<%= data[i].continent_id%>"><%= data[i].location%></a>
-                            </td>
-                        </tr>
-                    <% } %>
-                </tbody>
-            </table>
-            <% } %>
-        </h2>
-
-
-    </body>
-
+    <h2 id="continents_list">
+      <% if (data.length) { %>
+      <table>
+        <tbody>
+          <% for(let i = 0; i < data.length; i++) { %>
+          <tr>
+            <td>
+              <a href="./island-hopping/continent/<%= data[i].continent_id%>"
+                ><%= data[i].location%></a
+              >
+            </td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } %>
+    </h2>
+    <%- include('../partials/footer'); %>
+  </body>
 </html>
-

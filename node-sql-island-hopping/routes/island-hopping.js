@@ -27,7 +27,7 @@ island_hoppingRouter.get("/continent/:continent_id", function(req, res, next){
 
     return new Promise((resolve, reject) => {
         dbConn.query(
-            "SELECT continent.continent_id, continent.location, country.country_id, country.location " +
+            "SELECT continent.continent_id, continent.location, country.country_id, country.description, country.location " +
             "FROM continent, country " +
             "WHERE continent.continent_id = country.continent_id " +
             "AND continent.continent_id = " +
@@ -48,15 +48,22 @@ island_hoppingRouter.get("/continent/:continent_id", function(req, res, next){
 });
 
 island_hoppingRouter.get("/continent/country/:country_id", function (req, res, next){
+<<<<<<< HEAD
     let countryId = req.params.country_id
+=======
+    let countryId = req.params.country_id;
+>>>>>>> 55397314d917fe6471e1aa03f096ac831c1a23e1
 
     return new Promise((resolve, reject) =>{
         dbConn.query(
-            "SELECT country.country_id, country.location, island_chain.island_id, island_chain.location " + 
-            "FROM country, island_chain " +
-            'WHERE country.continent_id = island_chain.country_id ' + 
-            "AND country.country_id = " +
+            "SELECT country_island.country_id, country_island.island_id, island_chain.location, " + 
+            "island_chain.adventures, country.continent_id " +
+            "FROM country_island " +
+            "INNER JOIN island_chain ON country_island.island_id = island_chain.island_id " + 
+            "INNER JOIN country ON country_island.country_id = country.country_id " +
+            "WHERE country_island.country_id = " +
             countryId,
+            
 
             function (err, rows) {
                 if (err) {
@@ -70,6 +77,14 @@ island_hoppingRouter.get("/continent/country/:country_id", function (req, res, n
             }
         );
     });
+});
+
+island_hoppingRouter.get("/about-team", function(req, res, next){
+    res.render("about-team", {title: "About Scrum Lordz"});
+});
+
+island_hoppingRouter.get("/about-island-hop", function(req, res, next){
+    res.render("about-island-hop", {title: "About JAC Enterprises"});
 });
 
 module.exports = island_hoppingRouter;

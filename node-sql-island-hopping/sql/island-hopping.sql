@@ -53,11 +53,11 @@ update Country set continent_id = 3 where country_id = 5;
 update Country set continent_id = 2 where country_id = 6;
 
 insert into island_chain(location, adventures) values("Nassau","Home to the huge Atlantis resort and its massive waterpark. Most beautiful beaches in the world, indulging in world-classdining and nightlife, unwinding in award-winning spas, embarking on a thrilling underwater adventure.");
-insert into island_chain(location, adventures) values("Harbour Island","Famous for its three-mile-long pink beach that runs the entire length of the island on itseastern side. The beach is protected by an outlying coral reef that makes the turquoise clear water one of the safest and most alluring swimming and snorkeling spots in the Bahamas.");
+insert into island_chain(location, adventures) values("Harbour Island","Famous for its three-mile-long pink beach that runs the entire length of the island on its eastern side. The beach is protected by an outlying coral reef that makes the turquoise clear water one of the safest and most alluring swimming and snorkeling spots in the Bahamas.");
 insert into island_chain(location, adventures) values("Exuma","Known for its many “elusive” beaches, including world-famous Lighthouse Beach, Twin Coves Beach, Double Bay Beach, French Leave Beach and so many others.");
-insert into island_chain(location, adventures) values("Pandanon Island","While Pandanon Island is not the best spot for diving and snorkeling, tourists take delight in swimming on the clear, shallow waters of the island. Its powdery white sand is best forfrolicking by the beach or sunbathing.");
+insert into island_chain(location, adventures) values("Pandanon Island","While Pandanon Island isn’t the best spot for diving and snorkeling, tourists take delight in swimming on the clear, shallow waters of the island. Its powdery white sand is best forfrolicking by the beach or sunbathing.");
 insert into island_chain(location, adventures) values("Olango Island","The best time to go to Olango Island, especially if you're planning to visit the Wildlife Sanctuary, is in November when birds are flying south for the breeding season.");
-insert into island_chain(location, adventures) values("Nalusuan Island","The long sand bar of Nalusuan island is a sanctuary to all the  marine creatures and to the nature lovers. You can literally reach at arms length with the abundance of sea life here. The fishes that you have only seen in your plates will be see here in their natural habitat.You will feel like you are a part of the sea, the island and the life under water.");
+insert into island_chain(location, adventures) values("Nalusuan Island","The long sand bar of Nalusuan island is a sanctuary to all the  marine creatures and to the nature lovers. You can literally reach at arm’s length with the abundance of sea life here. The fishes that you have only seen in your plates will be see here in their natural habitat.You will feel like you are a part of the sea, the island and the life under water.");
 insert into island_chain(location, adventures) values("Koh Tao","The island is well known for scuba diving and snorkeling, as well as hiking, rock climbing, and bouldering.");
 insert into island_chain(location, adventures) values("Koh Pha Ngan","An island that's world-famous for its beach parties, the iconic full-moon and half-moon parties.");
 insert into island_chain(location, adventures) values("Koh Samui","A popular resort island in the Gulf of Thailand with stunning beaches and plenty of fun activities.");
@@ -185,6 +185,37 @@ insert into island_waterways(island_id, waterway_id) values(17,10);
 insert into island_waterways(island_id, waterway_id) values(18,11);
 
 select * from island_waterways;
+
+create TABLE IF NOT EXISTS country_island (
+	country_island_id INT auto_increment primary key,
+    country_id int,
+    island_id int,
+    created_at timestamp DEFAULT current_timestamp,
+    updated_at timestamp DEFAULT current_timestamp,
+    foreign key (island_id) references island_chain(island_id) on update cascade on delete cascade,
+    foreign key (country_id) references country(country_id) on update cascade on delete cascade
+) ENGINE=INNODB;
+
+insert into country_island(country_id, island_id) values(1,1);
+insert into country_island(country_id, island_id) values(1,2);
+insert into country_island(country_id, island_id) values(1,3);
+insert into country_island(country_id, island_id) values(2,7);
+insert into country_island(country_id, island_id) values(2,8);
+insert into country_island(country_id, island_id) values(2,9);
+insert into country_island(country_id, island_id) values(3,10);
+insert into country_island(country_id, island_id) values(3,11);
+insert into country_island(country_id, island_id) values(3,12);
+insert into country_island(country_id, island_id) values(4,13);
+insert into country_island(country_id, island_id) values(4,14);
+insert into country_island(country_id, island_id) values(4,15);
+insert into country_island(country_id, island_id) values(5,16);
+insert into country_island(country_id, island_id) values(5,17);
+insert into country_island(country_id, island_id) values(5,18);
+insert into country_island(country_id, island_id) values(6,4);
+insert into country_island(country_id, island_id) values(6,5);
+insert into country_island(country_id, island_id) values(6,6);
+
+select * from country_island;
 
 select country.country_id, country.location
 from country

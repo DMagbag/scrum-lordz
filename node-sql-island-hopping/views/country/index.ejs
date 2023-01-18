@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../../../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css" />
+    <title>JAC Enterprises Island Hopping</title>
+  </head>
 
+<<<<<<< HEAD
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -9,40 +21,40 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <title>Island Hopping</title>
     </head>
+=======
+  <body>
+    <%- include('../partials/header'); %> <% if (messages.success) { %>
+    <div class="alert alert-success" role="alert"><%- messages.success %></div>
+    <% } %> <% if (messages.error) { %>
+    <div class="alert alert-danger" role="alert"><%- messages.error %></div>
+    <% } %> <% if(data.length) { %>
+>>>>>>> 55397314d917fe6471e1aa03f096ac831c1a23e1
 
-    <body>
-        <header class="header">
-            <h1 class="header__title">Welcome to JAC Enterprises Island Hopping</h1>
+    <section class="island-list">
+      <h2 class="iland-list__heading">Islands and known adventures:</h2>
+      <nav class="island-list-nav">
+        <ul class="island-list-links__island">
+          <% for(let i = 0; i < data.length; i++) { %>
+          <li class="island-list-links__country">
+            <h3
+              class="island-list-links__link"
+              href="./islands/<%= data[i].island_id%>"
+            >
+              <%= data[i].location%>
+            </h3>
+          </li>
+          <p class="island-adventures"><%= data[i].adventures%></p>
+          <!-- <h3 class="island-details__island"><%= data[i].adventures%></h3> -->
+          <% } %> <% } %>
+        </ul>
+      </nav>
 
-            <% if (messages.success) { %>
-            <div class="alert alert-success" role="alert"><%- messages.success %></div>
-            <% } %>
-
-            <% if (messages.error) { %>
-            <div class="alert alert-danger" role="alert"><%- messages.error %></div>
-            <% } %>
-
-            <% if(data.length) { %>
-                <h2>
-                    <!-- <%= data[0].location %> -->
-                </h2>
-            <% } %>
-        </header>
-
-        <section class="island-list">
-            <h2 class="iland-list__heading">Here is a list of our islands:</h2>
-            <nav class="island-list-nav">
-                <ul class="island-list-links__island">
-                    <% for(let i = 0; i < data.length; i++) { %>
-                        <li class="island-list-links__country">
-                            <a class="island-list-links__link" href="./islands/<%= data[i].island_id%>"><%= data[i].location%></a>
-                        </li>
-                    <% } %>
-                </ul>
-            </nav>
-
-            <a class="nav__home" href="/island-hopping" >Back to Island Hopping</a>
-        </section>
-
-    </body>
+      <a
+        class="nav__home"
+        href="/island-hopping/continent/<%= data[0].continent_id %>"
+        >Back to Countries</a
+      >
+    </section>
+    <%- include('../partials/footer'); %>
+  </body>
 </html>
