@@ -13,19 +13,11 @@
   </head>
 
   <body>
-    <%- include('../partials/header'); %>
-
-    <header class="header">
-      <h1 class="header__title">Welcome to JAC Enterprises Island Hopping</h1>
-
-      <% if (messages.success) { %>
-      <div class="alert alert-success" role="alert">
-        <%- messages.success %>
-      </div>
-      <% } %> <% if (messages.error) { %>
-      <div class="alert alert-danger" role="alert"><%- messages.error %></div>
-      <% } %> <% if(data.length) { %>
-    </header>
+    <%- include('../partials/header'); %> <% if (messages.success) { %>
+    <div class="alert alert-success" role="alert"><%- messages.success %></div>
+    <% } %> <% if (messages.error) { %>
+    <div class="alert alert-danger" role="alert"><%- messages.error %></div>
+    <% } %> <% if(data.length) { %>
 
     <section class="island-list">
       <h2 class="iland-list__heading">Islands and known adventures:</h2>
