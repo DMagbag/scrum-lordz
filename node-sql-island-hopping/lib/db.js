@@ -3,11 +3,7 @@ const connection = mysql.createConnection({
     host: "localhost",
     port: "3306",
     user: "root",
-<<<<<<< HEAD
-    password: "92397237",
-=======
-    password: "EarlGrey1981",
->>>>>>> 55397314d917fe6471e1aa03f096ac831c1a23e1
+    password: "wccibootcamp",
     database: "island_hopping",
     insecureAuth: true,
 });
