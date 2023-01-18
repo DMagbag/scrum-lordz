@@ -15,14 +15,16 @@
   <body>
     <%- include('../partials/header'); %>
 
-    <h1>JAC Enterprises Island Hopping</h1>
+    <h1 id="island-hopping__title">
+      Welcome to JAC Enterprises Island Hopping
+    </h1>
     <% if (messages.success) { %>
     <div class="alert alert-success" role="alert"><%- messages.success %></div>
     <% } %> <% if (messages.error) { %>
     <div class="alert alert-danger" role="alert"><%- messages.error %></div>
     <% } %>
 
-    <h2>
+    <h2 id="continents_list">
       <% if (data.length) { %>
       <table>
         <tbody>

@@ -6,7 +6,12 @@
 }
 
 body {
-  background-image: node-sql-island-hopping/resources/images/beach-palm-tree-wallpaper.jpeg;
+  background-image: url("../images/island-wallpaper.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #a7effa;
 }
 
 html {
@@ -15,31 +20,42 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
-.container {
+/* .container {
   background-color: #dfce9d;
-}
+} */
 
 header {
-  background-color: #b5a36c;
+  background-image: url("../images/sand-wallpaper.jpeg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: tan;
+  border-radius: 10px;
+  border-color: brown;
+}
+
+h2 {
+  color: rgb(3, 3, 10);
 }
 
 #header_title {
-  color: #f2f4f3;
   font-style: bold;
   font-size: 50px;
 }
 
-#header__nav {
+/* #header__nav {
   color: #f2f4f3;
-}
+} */
 
 a {
-  color: #f2f4f3;
+  /* color: #f2f4f3; */
   text-decoration: none;
 }
 
 .header-nav--listitem {
   list-style-type: none;
+  color: rgb(3, 3, 10);
 }
 
 .header-nav--listitem:hover {
@@ -49,6 +65,13 @@ a {
   transition: 0.5s;
 }
 
+#island-hopping__title {
+  color: rgb(3, 3, 10);
+}
+
+#continents_list {
+  color: rgb(3, 3, 10);
+}
 #about-island-hopping {
   background-color: #236e95;
   border: 1px solid #1d5171;

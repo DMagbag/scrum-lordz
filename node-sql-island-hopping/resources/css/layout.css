@@ -14,8 +14,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
+
   margin: 0 auto;
-  padding: 10px;
+  padding: 0px;
 }
 
 #header_title {
@@ -40,6 +41,10 @@ a {
 
 .header-nav--listitem:hover {
   padding: 3px;
+}
+
+#island-hopping__title {
+  text-align: center;
 }
 
 #about-island-hopping {
