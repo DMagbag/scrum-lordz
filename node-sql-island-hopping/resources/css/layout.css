@@ -15,8 +15,8 @@ header {
   align-items: center;
   justify-content: space-around;
 
-  margin: 0 auto;
-  padding: 0px;
+  margin: 0;
+  padding: 10px;
 }
 
 #header_title {
@@ -24,22 +24,24 @@ header {
 }
 
 #header__nav {
-  margin-right: 5px;
+  margin: 5px;
 }
 
 #header-nav--list {
   display: flex;
+  justify-content: space-evenly;
 }
 
 a {
   padding: 0.25 rem 0.5rem;
 }
 
-.header-nav--listitem {
+.header-nav--listItem {
   margin: 1rem;
+  text-align: center;
 }
 
-.header-nav--listitem:hover {
+.header-nav--listItem:hover {
   padding: 3px;
 }
 
@@ -101,9 +103,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 2rem;
+  margin-top: 25rem;
 }
 
-#footer__copyright {
+/* #footer__copyright {
   margin-left: 1rem;
-}
+} */
