@@ -1,0 +1,134 @@
+<style>
+  body {font-family: "Lato", sans-serif;}
+  
+  .tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+    opacity: 80%;
+  }
+  
+  .tablink:hover {
+    background-color: #777;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  
+  </style>
+ 
+  <!-- <p class="waterway">The Oceans, Seas, and Waterways involved:</p> -->
+  
+  <div id="Artic Ocean" class="tabcontent">
+    <h1>Artic Ocean</h1>
+    <p>Continents included: Asia, Europe, North-America</p>
+  </div>
+  
+  <div id="Pacific Ocean" class="tabcontent">
+    <h1>Pacific Ocean</h1>
+    <p>Continents included: Asia, North-America</p>
+    <p>Countries included: Philippines</p>
+  </div>
+  
+  <div id="Indian Ocean" class="tabcontent">
+    <h1>Indian Ocean</h1>
+    <p>Continents included: Asia</p>
+    <p>Countries included: Thailand</p>
+  </div>
+  
+  <div id="Atlantic Ocean" class="tabcontent">
+    <h1>Atlantic Ocean</h1>
+    <p>Continents included: Asia, Europe</p>
+    <p>Countries included: Bahamas, Croatia, Greece, Japan</p>
+    <p>Islands included: Exuma, Harbour Island, Nassau</p>
+  </div>
+
+  <div id="Gulf of Thailand" class="tabcontent">
+    <h1>Gulf of Thailand</h1>
+    <p>Islands included: Koh Tao, Koh Pha Ngan, Koh Samui</p>
+  </div>
+
+  <div id="Tokyo Bay" class="tabcontent">
+    <h1>Tokyo Bay</h1>
+    <p>Islands included: Odaiba</p>
+  </div>
+
+  <div id="North-Western Pacific Ocean" class="tabcontent">
+    <h1>North-Western Pacific Ocean</h1>
+    <p>Islands included: Ogasawara island</p>
+  </div>
+
+  <div id="East China Sea" class="tabcontent">
+    <h1>East China Sea</h1>
+    <p>Islands included: Yakushima island</p>
+  </div>
+
+  <div id="Adriatic Sea" class="tabcontent">
+    <h1>Adriatic Sea</h1>
+    <p>Islands included: Hvar, Dubrovnik, Split</p>
+  </div>
+
+  <div id="Aegean Sea" class="tabcontent">
+    <h1>Aegean Sea</h1>
+    <p>Islands included: Paros, Mykonos</p>
+  </div>
+
+  <div id="Southern Aegean Sea" class="tabcontent">
+    <h1>Southern Aegean Sea</h1>
+    <p>Islands included: Santorini</p>
+  </div>
+
+  <div id="Camotes Sea" class="tabcontent">
+    <h1>Camotes Sea</h1>
+    <p>Islands included: Olanga Island, Pandanon Island</p>
+  </div>
+
+  <div id="Philippine Sea" class="tabcontent">
+    <h1>Philippine Sea</h1>
+    <p>Islands included: Nalusuan Island</p>
+  </div>
+
+  
+  <button class="tablink" onclick="openCity('Artic Ocean', this, 'red')" id="defaultOpen">Artic Ocean</button>
+  <button class="tablink" onclick="openCity('Pacific Ocean', this, 'green')">Pacific Ocean</button>
+  <button class="tablink" onclick="openCity('Indian Ocean', this, 'blue')">Indian Ocean</button>
+  <button class="tablink" onclick="openCity('Atlantic Ocean', this, 'orange')">Atlantic Ocean</button>
+  <button class="tablink" onclick="openCity('Gulf of Thailand', this, 'purple')">Gulf of Thailand</button>
+  <button class="tablink" onclick="openCity('Tokyo Bay', this, 'orange')">Tokyo Bay</button>
+  <button class="tablink" onclick="openCity('North-Western Pacific Ocean', this, 'blue')">North-Western Pacific Ocean</button>
+  <button class="tablink" onclick="openCity('East China Sea', this, 'red')">East China Sea</button>
+  <button class="tablink" onclick="openCity('Adriatic Sea', this, 'green')">Adriatic Sea</button>
+  <button class="tablink" onclick="openCity('Aegean Sea', this, 'blue')">Aegean Sea</button>
+  <button class="tablink" onclick="openCity('Southern Aegean Sea', this, 'violet')">Southern Aegean Sea</button>
+  <button class="tablink" onclick="openCity('Camotes Sea', this, 'green')">Camotes Sea</button>
+  <button class="tablink" onclick="openCity('Philippine Sea', this, 'indigo')">Philippine Sea</button>
+  <script>
+  function openCity(cityName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(cityName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+  
+  }
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
