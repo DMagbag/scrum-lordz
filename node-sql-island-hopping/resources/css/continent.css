@@ -94,12 +94,18 @@
 
   .country-list-nav {
     text-align: center;
-
+    border: 7px solid brown;
+    border-radius: 5px;
+    border-style: outset;
+    
   }
   
 .country-list-links__country {
   text-align: center;
-  
+  border: 7px solid brown(175, 89, 89);
+  border-radius: 10px;
+  background: rgba(76, 175, 80, 0.3);
+  border-style: outset;
 }
 
   .footer {
