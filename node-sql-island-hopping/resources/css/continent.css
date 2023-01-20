@@ -91,7 +91,17 @@
   .about-bio {
     margin: 10px;
   }
+
+  .country-list-nav {
+    text-align: center;
+
+  }
   
+.country-list-links__country {
+  text-align: center;
+  
+}
+
   .footer {
     display: flex;
     align-items: center;
