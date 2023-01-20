@@ -1,121 +1,22 @@
-* {
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0;
-    padding: 5px;
-  }
-  
-  .container {
-    border-radius: 5px;
-    max-width: 100vw;
-  }
-  
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0 auto;
-    padding: 10px;
-  }
-  
-  #header_title {
-    margin-left: 0;
-  }
-  
-  #header__nav {
-    margin-right: 5px;
-  }
-  
-  #header-nav--list {
-    display: flex;
-  }
-  
-  a {
-    padding: 0.25 rem 0.5rem;
-  }
-  
-  .header-nav--listitem {
-    margin: 1rem;
-  }
-  
-  .header-nav--listitem:hover {
-    padding: 3px;
-  }
-  
-  #about-island-hopping {
-    display: block;
-    justify-content: space-between;
-    margin: 25px auto;
-    padding: 3px;
-  }
-  
-  #about-island-hopping--title {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1rem;
-  }
-  
-  #about-team--title {
-    text-align: center;
-    margin-left: 2px;
-  }
-  
-  .about-column {
-    border-radius: 5px;
-    margin: 2px;
-  }
-  
-  #about-team-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-  
-  .about-name {
-    margin: 20px;
-    text-align: center;
-  }
-  
-  .about-column--figure {
-    max-width: 100%;
-    text-align: center;
-  }
-  
-  .about-image {
-    text-align: center;
-    height: auto;
-    max-width: 50%;
-    margin: 5px;
-  }
-  
-  .about-bio {
-    margin: 10px;
-  }
+.country-list__heading {
+  text-align: center;
+  margin: 30px auto;
+  border-radius: 10px;
+  font-size: 30px;
+}
 
-  .country-list-nav {
-    text-align: center;
-    border: 7px solid brown;
-    border-radius: 5px;
-    border-style: outset;
-    
-  }
-  
+.country-list-nav {
+  border-radius: 10px;
+  border: 2mm ridge brown;
+  color: rgb(3, 3, 10);
+  padding: 0;
+}
+
 .country-list-links__country {
+  list-style-type: none;
   text-align: center;
   border: 7px solid brown(175, 89, 89);
   border-radius: 10px;
   background: rgba(76, 175, 80, 0.3);
   border-style: outset;
 }
-
-  .footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 2rem;
-  }
-  
-  #footer__copyright {
-    margin-left: 1rem;
-  }
-  

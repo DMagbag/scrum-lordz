@@ -1,151 +1,231 @@
-<style>
-  body {font-family: "Lato", sans-serif;}
-  
-  .tablink {
-    background-color: #555;
-    color: white;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    font-size: 17px;
-    width: 25%;
-    opacity: 80%;
-  }
-  
-  .tablink:hover {
-    background-color: #777;
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
-    color: white;
-    display: none;
-    padding: 50px;
-    text-align: center;
-  }
-  
-  
-  </style>
- 
-  <!-- <p class="waterway">The Oceans, Seas, and Waterways involved:</p> -->
-  
-  <div id="Artic Ocean" class="tabcontent">
-    <h1>Artic Ocean</h1>
-    <p>The Arctic Ocean is Earth's northernmost body of water. It encircles the Arctic, and flows beneath it.
-       Most of the Arctic Ocean is covered by ice throughout the year—although that is starting to change as temperatures climb.
-       Pale and stark on the surface, the Arctic Ocean is home to a stunning array of life. 
-      </p>
-      <p>Continents included: Asia, Europe, North-America</p>
+<h2 id="waterways__title">Island Hopping Waterways</h2>
+
+<p id="instructions">Click on a tab for more info.</p>
+
+<div id="tabs">
+  <button
+    class="tablink"
+    onclick="openCity('Arctic Ocean', this, 'red')"
+    id="defaultOpen"
+  >
+    Arctic Ocean
+  </button>
+
+  <button class="tablink" onclick="openCity('Pacific Ocean', this, 'green')">
+    Pacific Ocean
+  </button>
+
+  <button class="tablink" onclick="openCity('Indian Ocean', this, 'blue')">
+    Indian Ocean
+  </button>
+
+  <button class="tablink" onclick="openCity('Atlantic Ocean', this, 'orange')">
+    Atlantic Ocean
+  </button>
+
+  <button
+    class="tablink"
+    onclick="openCity('Gulf of Thailand', this, 'purple')"
+  >
+    Gulf of Thailand
+  </button>
+
+  <button class="tablink" onclick="openCity('Tokyo Bay', this, 'orange')">
+    Tokyo Bay
+  </button>
+
+  <button
+    class="tablink"
+    onclick="openCity('North-Western Pacific Ocean', this, 'blue')"
+  >
+    North-Western Pacific Ocean
+  </button>
+
+  <button class="tablink" onclick="openCity('East China Sea', this, 'red')">
+    East China Sea
+  </button>
+
+  <button class="tablink" onclick="openCity('Adriatic Sea', this, 'green')">
+    Adriatic Sea
+  </button>
+
+  <button class="tablink" onclick="openCity('Aegean Sea', this, 'blue')">
+    Aegean Sea
+  </button>
+
+  <button
+    class="tablink"
+    onclick="openCity('Southern Aegean Sea', this, 'violet')"
+  >
+    Southern Aegean Sea
+  </button>
+
+  <button class="tablink" onclick="openCity('Camotes Sea', this, 'green')">
+    Camotes Sea
+  </button>
+
+  <button class="tablink" onclick="openCity('Philippine Sea', this, 'indigo')">
+    Philippine Sea
+  </button>
+
+  <div id="Arctic Ocean" class="tabcontent">
+    <h2>Arctic Ocean</h2>
+    <p>
+      The Arctic Ocean is Earth's northernmost body of water. It encircles the
+      Arctic, and flows beneath it. Most of the Arctic Ocean is covered by ice
+      throughout the year—although that is starting to change as temperatures
+      climb. Pale and stark on the surface, the Arctic Ocean is home to a
+      stunning array of life.
+    </p>
+    <p>Continents included: Asia, Europe, North-America</p>
   </div>
-  
+
   <div id="Pacific Ocean" class="tabcontent">
-    <h1>Pacific Ocean</h1>
-    <p>Pacific Ocean, body of salt water extending from the 60° S parallel in the south to the Arctic in the north and lying between the continents of Asia and Australia on the west and North America and South America on the east.</p>
+    <h2>Pacific Ocean</h2>
+    <p>
+      Pacific Ocean, body of salt water extending from the 60° S parallel in the
+      south to the Arctic in the north and lying between the continents of Asia
+      and Australia on the west and North America and South America on the east.
+    </p>
     <p>Continents included: Asia, North-America</p>
     <p>Countries included: Philippines</p>
   </div>
-  
+
   <div id="Indian Ocean" class="tabcontent">
-    <h1>Indian Ocean</h1>
-    <p>The Indian Ocean is the third largest body of water in the world, covering about 20% of the Earth's water surface. It is bounded on the north by Southern Asia (including the Indian subcontinent, hence its name)</p>
+    <h2>Indian Ocean</h2>
+    <p>
+      The Indian Ocean is the third largest body of water in the world, covering
+      about 20% of the Earth's water surface. It is bounded on the north by
+      Southern Asia (including the Indian subcontinent, hence its name)
+    </p>
     <p>Continents included: Asia</p>
     <p>Countries included: Thailand</p>
   </div>
-  
+
   <div id="Atlantic Ocean" class="tabcontent">
-    <h1>Atlantic Ocean</h1>
-    <p>Atlantic Ocean, body of salt water covering approximately one-fifth of Earth’s surface and separating the continents of Europe and Africa to the east from those of North and South America to the west. The ocean’s name, derived from Greek mythology, means the “Sea of Atlas.” It is second in size to the Pacific Ocean.</p>
+    <h2>Atlantic Ocean</h2>
+    <p>
+      Atlantic Ocean, body of salt water covering approximately one-fifth of
+      Earth’s surface and separating the continents of Europe and Africa to the
+      east from those of North and South America to the west. The ocean’s name,
+      derived from Greek mythology, means the “Sea of Atlas.” It is second in
+      size to the Pacific Ocean.
+    </p>
     <p>Continents included: Asia, Europe</p>
     <p>Countries included: Bahamas, Croatia, Greece, Japan</p>
     <p>Islands included: Exuma, Harbour Island, Nassau</p>
   </div>
 
   <div id="Gulf of Thailand" class="tabcontent">
-    <h1>Gulf of Thailand</h1>
-    <p>The Gulf of Thailand, also known as the Gulf of Siam, is a shallow inlet[1][2] in the southwestern South China Sea, bounded between the southwestern shores of the Indochinese Peninsula and the northern half of the Malay Peninsula.</p>
+    <h2>Gulf of Thailand</h2>
+    <p>
+      The Gulf of Thailand, also known as the Gulf of Siam, is a shallow
+      inlet[1][2] in the southwestern South China Sea, bounded between the
+      southwestern shores of the Indochinese Peninsula and the northern half of
+      the Malay Peninsula.
+    </p>
     <p>Islands included: Koh Tao, Koh Pha Ngan, Koh Samui</p>
   </div>
 
   <div id="Tokyo Bay" class="tabcontent">
-    <h1>Tokyo Bay</h1>
-    <p>is a bay located in the southern Kantō region of Japan, and spans the coasts of Tokyo, Kanagawa Prefecture, and Chiba Prefecture. Tokyo Bay is connected to the Pacific Ocean by the Uraga Channel. The Tokyo Bay region is both the most populous and largest industrialized area in Japan.</p>
+    <h2>Tokyo Bay</h2>
+    <p>
+      is a bay located in the southern Kantō region of Japan, and spans the
+      coasts of Tokyo, Kanagawa Prefecture, and Chiba Prefecture. Tokyo Bay is
+      connected to the Pacific Ocean by the Uraga Channel. The Tokyo Bay region
+      is both the most populous and largest industrialized area in Japan.
+    </p>
     <p>Islands included: Odaiba</p>
-    
   </div>
 
   <div id="North-Western Pacific Ocean" class="tabcontent">
-    <h1>North-Western Pacific Ocean</h1>
-    <p>The Northwest Pacific region features coastal and island ecosystems with spectacular marine life and commercially important fishing resources. Home to a wealth of biodiversity and mineral resources, the region is also one of the most densely populated in the world, resulting in unprecedented pressures on ecosystems and the environment.</p>
+    <h2>North-Western Pacific Ocean</h2>
+    <p>
+      The Northwest Pacific region features coastal and island ecosystems with
+      spectacular marine life and commercially important fishing resources. Home
+      to a wealth of biodiversity and mineral resources, the region is also one
+      of the most densely populated in the world, resulting in unprecedented
+      pressures on ecosystems and the environment.
+    </p>
     <p>Islands included: Ogasawara island</p>
   </div>
 
   <div id="East China Sea" class="tabcontent">
-    <h1>East China Sea</h1>
-    <p>The East China Sea and the South China Sea together form the China Sea. The East China Sea extends to the east to the chain of the Ryukyu Islands; north to Kyushu, which is the southernmost of Japan’s main islands; northwest to Cheju Island off South Korea; and hence west to China.</p>
+    <h2>East China Sea</h2>
+    <p>
+      The East China Sea and the South China Sea together form the China Sea.
+      The East China Sea extends to the east to the chain of the Ryukyu Islands;
+      north to Kyushu, which is the southernmost of Japan’s main islands;
+      northwest to Cheju Island off South Korea; and hence west to China.
+    </p>
     <p>Islands included: Yakushima island</p>
   </div>
 
   <div id="Adriatic Sea" class="tabcontent">
-    <h1>Adriatic Sea</h1>
-    <p>The Adriatic contains more than 1,300 islands, mostly located along the Croatian part of its eastern coast. It is divided into three basins, the northern being the shallowest and the southern being the deepest, with a maximum depth of 1,233 metres (4,045 ft).</p>
+    <h2>Adriatic Sea</h2>
+    <p>
+      The Adriatic contains more than 1,300 islands, mostly located along the
+      Croatian part of its eastern coast. It is divided into three basins, the
+      northern being the shallowest and the southern being the deepest, with a
+      maximum depth of 1,233 metres (4,045 ft).
+    </p>
     <p>Islands included: Hvar, Dubrovnik, Split</p>
   </div>
 
   <div id="Aegean Sea" class="tabcontent">
-    <h1>Aegean Sea</h1>
-    <p>An arm of the Mediterranean between Greece and Turkey; a main trade route for the ancient civilizations of Crete and Greece and Rome and Persia. </p>
+    <h2>Aegean Sea</h2>
+    <p>
+      An arm of the Mediterranean between Greece and Turkey; a main trade route
+      for the ancient civilizations of Crete and Greece and Rome and Persia.
+    </p>
     <p>Islands included: Paros, Mykonos</p>
   </div>
 
   <div id="Southern Aegean Sea" class="tabcontent">
-    <h1>Southern Aegean Sea</h1>
-    <p>The South Aegean is one of the thirteen administrative regions of Greece. It consists of the Cyclades and Dodecanese island groups in the central and southeastern Aegean Sea.</p>
+    <h2>Southern Aegean Sea</h2>
+    <p>
+      The South Aegean is one of the thirteen administrative regions of Greece.
+      It consists of the Cyclades and Dodecanese island groups in the central
+      and southeastern Aegean Sea.
+    </p>
     <p>Islands included: Santorini</p>
   </div>
 
   <div id="Camotes Sea" class="tabcontent">
-    <h1>Camotes Sea</h1>
-    <p>The Camotes Sea is a small sea within the Philippine archipelago, situated between the Central Visayan and the Eastern Visayan regions. </p>
+    <h2>Camotes Sea</h2>
+    <p>
+      The Camotes Sea is a small sea within the Philippine archipelago, situated
+      between the Central Visayan and the Eastern Visayan regions.
+    </p>
     <p>Islands included: Olanga Island, Pandanon Island</p>
   </div>
 
   <div id="Philippine Sea" class="tabcontent">
-    <h1>Philippine Sea</h1>
-    <p>Philippine Sea, section of the western North Pacific Ocean, lying east and north of the Philippines. The floor of this portion of the ocean is formed into a structural basin by a series of geologic folds and faults that protrude above the surface in the form of bordering island arcs.</p>
+    <h2>Philippine Sea</h2>
+    <p>
+      Philippine Sea, section of the western North Pacific Ocean, lying east and
+      north of the Philippines. The floor of this portion of the ocean is formed
+      into a structural basin by a series of geologic folds and faults that
+      protrude above the surface in the form of bordering island arcs.
+    </p>
     <p>Islands included: Nalusuan Island</p>
   </div>
+</div>
 
-  
-  <button class="tablink" onclick="openCity('Artic Ocean', this, 'red')" id="defaultOpen">Artic Ocean</button>
-  <button class="tablink" onclick="openCity('Pacific Ocean', this, 'green')">Pacific Ocean</button>
-  <button class="tablink" onclick="openCity('Indian Ocean', this, 'blue')">Indian Ocean</button>
-  <button class="tablink" onclick="openCity('Atlantic Ocean', this, 'orange')">Atlantic Ocean</button>
-  <button class="tablink" onclick="openCity('Gulf of Thailand', this, 'purple')">Gulf of Thailand</button>
-  <button class="tablink" onclick="openCity('Tokyo Bay', this, 'orange')">Tokyo Bay</button>
-  <button class="tablink" onclick="openCity('North-Western Pacific Ocean', this, 'blue')">North-Western Pacific Ocean</button>
-  <button class="tablink" onclick="openCity('East China Sea', this, 'red')">East China Sea</button>
-  <button class="tablink" onclick="openCity('Adriatic Sea', this, 'green')">Adriatic Sea</button>
-  <button class="tablink" onclick="openCity('Aegean Sea', this, 'blue')">Aegean Sea</button>
-  <button class="tablink" onclick="openCity('Southern Aegean Sea', this, 'violet')">Southern Aegean Sea</button>
-  <button class="tablink" onclick="openCity('Camotes Sea', this, 'green')">Camotes Sea</button>
-  <button class="tablink" onclick="openCity('Philippine Sea', this, 'indigo')">Philippine Sea</button>
-  <script>
-  function openCity(cityName,elmnt,color) {
+<script>
+  function openCity(cityName, elmnt, color) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
     }
     tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
+    for (i = 0; i < tabcontent.length; i++) {
       tablinks[i].style.backgroundColor = "";
     }
     document.getElementById(cityName).style.display = "block";
     elmnt.style.backgroundColor = color;
-  
   }
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
-  </script>
+</script>

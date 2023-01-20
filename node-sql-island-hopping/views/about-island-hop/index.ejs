@@ -7,18 +7,25 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-    <title>About JAC Enterprises</title>
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>JAC Enterprises Island Hopping</title>
   </head>
-  <body>
-    <%- include('../partials/header'); %>
-    <h2 id="about-jac">About JAC Enterprises</h2>
-    <p id="about-JAC--info">
-      JAC Enterprises: Established in 2013. Our goal is to take over the island hopping market. 
-      We offer the best deals and experience for the money. 
-      This has been the goal since we decided that we wanted to help the average person be able to experience the world. 
-    </p>
-    <%- include('../partials/footer'); %>
+
+  <body class="container">
+    <div id="page-container">
+      <header><%- include('../partials/header'); %></header>
+
+      <main id="content-wrap">
+        <h2 id="about-jac">About JAC Enterprises</h2>
+        <p id="about-jac--info">
+          JAC Enterprises: Established in 2013. Our goal is to take over the
+          island hopping market. We offer the best deals and experience for the
+          money. This has been the goal since we decided that we wanted to help
+          the average person be able to experience the world.
+        </p>
+      </main>
+      <footer id="footer"><%- include('../partials/footer'); %></footer>
+    </div>
   </body>
 </html>
