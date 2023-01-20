@@ -71,7 +71,7 @@ header {
 #continents__list {
   display: grid;
   align-items: center;
-  width: fit-content;
+  /* width: fit-content; */
 }
 
 .listItem {
