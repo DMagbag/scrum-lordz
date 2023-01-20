@@ -9,45 +9,46 @@
     />
     <link rel="stylesheet" href="../../css/layout.css" />
     <link rel="stylesheet" href="../../css/style.css" />
-    <link rel="stylesheet" href="../../resources/css/continent.css">
+    <link rel="stylesheet" href="../../css/continent.css" />
     <title>Island Hopping Countries</title>
   </head>
 
-  <body>
-    <%- include('../partials/header'); %>
+  <body class="container">
+    <div id="page-container">
+      <header><%- include('../partials/header'); %></header>
 
-   
+      <main id="content-wrap">
+        <% if (messages.success) { %>
+        <div class="alert alert-success" role="alert">
+          <%- messages.success %>
+        </div>
+        <% } %> <% if (messages.error) { %>
+        <div class="alert alert-danger" role="alert"><%- messages.error %></div>
+        <% } %> <% if(data.length) { %>
 
-      <% if (messages.success) { %>
-      <div class="alert alert-success" role="alert">
-        <%- messages.success %>
-      </div>
-      <% } %> <% if (messages.error) { %>
-      <div class="alert alert-danger" role="alert"><%- messages.error %></div>
-      <% } %> <% if(data.length) { %>
-    </header>
-
-    <section class="country-list">
-      <h2 class="country-list__heading">Here is a list of our countries:</h2>
-      <nav class="country-list-nav">
-        <ul class="country-list-links__country">
-          <% for(let i = 0; i < data.length; i++) { %>
-          <li class="country-list-links__country">
-            <h3>
-              <a
-                class="country-list-links__link"
-                href="./country/<%= data[i].country_id%>"
-                ><%= data[i].location%></a
-              >
-            </h3>
-          </li>
-          <p class="country-description"><%= data[i].description%></p>
-          <% } %> <% } %>
-        </ul>
-      </nav>
-
-      <a class="nav__home" href="/island-hopping">Back to Island Hopping</a>
-    </section>
-    <%- include('../partials/footer'); %>
+        <section class="country-list">
+          <h2 class="country-list__heading">
+            Here is a list of our countries:
+          </h2>
+          <nav class="country-list-nav">
+            <ul class="country-list-links__country">
+              <% for(let i = 0; i < data.length; i++) { %>
+              <li class="country-list-links__country">
+                <h3>
+                  <a
+                    class="country-list-links__link"
+                    href="./country/<%= data[i].country_id%>"
+                    ><%= data[i].location%></a
+                  >
+                </h3>
+              </li>
+              <p class="country-description"><%= data[i].description%></p>
+              <% } %> <% } %>
+            </ul>
+          </nav>
+        </section>
+      </main>
+      <footer><%- include('../partials/footer'); %></footer>
+    </div>
   </body>
 </html>
