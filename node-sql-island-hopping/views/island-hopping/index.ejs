@@ -12,34 +12,88 @@
     <title>JAC Enterprises Island Hopping</title>
   </head>
 
-  <body>
+  <body class="container">
     <%- include('../partials/header'); %>
+    <main>
+      <h1 id="island-hopping__title">JAC Enterprises Island Hopping</h1>
 
-    <h1>JAC Enterprises Island Hopping</h1>
-    <% if (messages.success) { %>
-    <div class="alert alert-success" role="alert"><%- messages.success %></div>
-    <% } %> <% if (messages.error) { %>
-    <div class="alert alert-danger" role="alert"><%- messages.error %></div>
-    <% } %>
+      <p id="about-island-hopping">
+        Island hop by flying or ferrying yourself from one island to another. It's a fun way to experience the culture of each island
+        and its individual characteristics. 
+    </p>
 
-    <h2 id="continents_list">
-      <% if (data.length) { %>
-      <table>
-        <tbody>
-          <% for(let i = 0; i < data.length; i++) { %>
-          <tr>
-            <td>
-              <a href="./island-hopping/continent/<%= data[i].continent_id%>"
-                ><%= data[i].location%></a
-              >
-            </td>
-          </tr>
-          <% } %>
-        </tbody>
-      </table>
-      <% } %>
-    </h2>
-    <%- include('../waterways/tab'); %>
+      <%- include('../island-hopping/slideshow'); %>
+
+
+     
+
+      <section id="continents">
+        <h3 id="where-to">Where in the world do you want to go?</h3>
+          <div id="continents__map__list">
+<!-- column left -->
+        <img   
+          id="continents__image"
+          src="../images/continents.jpg"
+          alt="continent-map"
+        />
+
+      
+  
+
+      
+
+        <% if (messages.success) { %>
+        <div class="alert alert-success" role="alert">
+          <%- messages.success %>
+        </div>
+        <% } %> <% if (messages.error) { %>
+        <div class="alert alert-danger" role="alert"><%- messages.error %></div>
+        <% } %>
+
+        <!-- <h2 id="continents_list"> -->
+        <% if (data.length) { %>
+<!-- column right -->
+        <ul id="continents__list">
+         
+          <li class="listItem" , id="europe">
+            <a href="./island-hopping/continent/<%= data[0].continent_id%>"
+              ><%= data[0].location%></a
+            >
+          </li>
+          <li class="listItem" , id="asia">
+            <a href="./island-hopping/continent/<%= data[1].continent_id%>"
+              ><%= data[1].location%></a
+            >
+          </li>
+          <li class="listItem" , id="north-america">
+            <a href="./island-hopping/continent/<%= data[2].continent_id%>"
+              ><%= data[2].location%></a
+            >
+          </li>
+          <li class="no-link__listItem">South America</li>
+          <li class="no-link__listItem">Africa</li>
+          <li class="no-link__listItem">Australia</li>
+        </ul>
+      
+        
+
+        <!-- <table>
+          <tbody>
+            <% for(let i = 0; i < data.length; i++) { %>
+            <tr>
+              <td>
+                <a href="./island-hopping/continent/<%= data[i].continent_id%>"
+                  ><%= data[i].location%></a
+                >
+              </td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+        <% } %>
+      </h2> -->
+      </section>
+    </main>
     <%- include('../partials/footer'); %>
   </body>
 </html>

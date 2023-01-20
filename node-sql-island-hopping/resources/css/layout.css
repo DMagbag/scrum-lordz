@@ -14,9 +14,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-
   margin: 0;
   padding: 10px;
+  position: sticky;
 }
 
 #header_title {
@@ -32,9 +32,9 @@ header {
   justify-content: space-evenly;
 }
 
-a {
+/* a {
   padding: 0.25 rem 0.5rem;
-}
+} */
 
 .header-nav--listItem {
   margin: 1rem;
@@ -47,6 +47,43 @@ a {
 
 #island-hopping__title {
   text-align: center;
+  margin: 30px;
+}
+
+#where-to {
+  text-align: center;
+  margin: 30px;
+}
+
+#continents__map__list {
+  border-radius: 5px;
+  margin: 2px;
+  display: flex;
+}
+#continents__image {
+  text-align: center;
+  height: auto;
+  max-width: 75%;
+  margin: 5px;
+  /* width: 60% */
+}
+
+#continents__list {
+  display: grid;
+  align-items: center;
+  width: fit-content;
+}
+
+.listItem {
+  text-align: center;
+  margin: 10px 50px 20px 0;
+  padding: 0;
+}
+
+.no-link__listItem {
+  text-align: center;
+  margin: 10px 50px 20px 0;
+  padding: 0;
 }
 
 #about-island-hopping {
@@ -54,6 +91,7 @@ a {
   justify-content: space-between;
   margin: 25px auto;
   padding: 3px;
+  text-align: center;
 }
 
 #about-island-hopping--title {
